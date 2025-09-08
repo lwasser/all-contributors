@@ -73,6 +73,10 @@ workflows:
   build_and_deploy:
     jobs:
       - build-astro-docs:
+          filters:
+            branches:
+              ignore:
+                - main
       - node_modules:
           filters:
             branches:
