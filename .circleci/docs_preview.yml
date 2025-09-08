@@ -1,0 +1,23 @@
+version: 2.1
+
+jobs:
+  build-astro-docs:
+    docker:
+      - image: cimg/node:22.2 
+    steps:
+      - checkout
+      - run:
+          name: Install dependencies
+          command: npm ci
+      - run:
+          name: Build Astro site
+          command: npm run build
+      - store_artifacts:
+          path: dist
+          destination: astro-docs
+
+workflows:
+  version: 2
+  build-astro-docs:
+    jobs:
+      - build-astro-docs
