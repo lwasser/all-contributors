@@ -23,6 +23,20 @@ commands:
             - node_modules/
 
 jobs:
+  build-astro-docs:
+    docker:
+      - image: cimg/node:22.2 
+    steps:
+      - checkout
+      - run:
+          name: Install dependencies
+          command: npm ci
+      - run:
+          name: Build Astro site
+          command: npm run build
+      - store_artifacts:
+          path: dist
+          destination: astro-docs
   node_modules:
     <<: *docker_defaults
     working_directory: ~/repo
@@ -58,28 +72,29 @@ workflows:
   version: 2
   build_and_deploy:
     jobs:
+      - build-astro-docs:
       - node_modules:
           filters:
             branches:
               only:
-                - master
+                - main
       - publish_release:
           requires:
             - node_modules
           filters:
             branches:
               only:
-                - master
+                - main
       - check_404s:
           requires:
             - publish_release
           filters:
             branches:
               only:
-                - master
+                - main
 
 experimental:
   notify:
     branches:
       only:
-        - master
+        - main
