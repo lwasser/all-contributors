@@ -9,7 +9,7 @@ const base = process.env.BASE_PATH || '/';
 
 export default defineConfig({
 		site: 'https://allcontributors.org',
-		base: '/',
+		base: base,
 		output: 'static',
 		redirects: {
 			// Later we can put redirects here if needed
