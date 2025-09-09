@@ -1,12 +1,15 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
-
 import sitemap from '@astrojs/sitemap';
+
+// define base path if available as an env variable otherwise set to /
+const base = process.env.BASE_PATH || '/';
+
 
 export default defineConfig({
 		site: 'https://allcontributors.org',
-		base: '/all-contributors/',
+		base: '/',
 		output: 'static',
 		redirects: {
 			// Later we can put redirects here if needed
