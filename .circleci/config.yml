@@ -68,6 +68,7 @@ jobs:
           name: Check 404s production
           command: npx blc https://allcontributors.org -ro || true
 
+# Add astro build preview
 workflows:
   version: 2
   build_and_deploy:
