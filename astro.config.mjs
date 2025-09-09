@@ -6,7 +6,7 @@ import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
 		site: 'https://allcontributors.org',
-		base: '/',
+		base: '/all-contributors/',
 		output: 'static',
 		redirects: {
 			// Later we can put redirects here if needed
