@@ -16,7 +16,8 @@
     "astro": "astro",
     "link-check-md": "lychee src/content/docs/**/*.md --root-dir $(pwd)/public",
     "link-check-md-offline": "lychee src/content/docs/**/*.md --root-dir $(pwd)/public --offline",
-    "lint": "markdownlint **/*.md --ignore node_modules"
+    "lint": "markdownlint **/*.{md,mdx} --ignore node_modules",
+    "lint-fix": "markdownlint **/*.{md,mdx} --ignore node_modules --fix"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.5.1",

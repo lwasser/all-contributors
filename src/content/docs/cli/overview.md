@@ -12,8 +12,9 @@ sidebar_label: Overview
 The all-contributors-cli is a tool that helps you automate adding contributor acknowledgements for your GitHub or GitLab repository at the command line. THe GitHub bot allows you to call our bot in a issue or pull request.
 
 You want to use the command line because:
-- You want to add contributors in bulk
-- You want to add contributors as part of your project scripts
-- You want to add contributors as part of your continuous integration (CI) process
+
+* You want to add contributors in bulk
+* You want to add contributors as part of your project scripts
+* You want to add contributors as part of your continuous integration (CI) process
 
 Similar to the bot, the CLI allows you to implement the [All Contributors](../specification) spec, without maintaining the contributor table by hand.
