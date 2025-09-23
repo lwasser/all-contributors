@@ -11,7 +11,11 @@ sidebar_label: Help us Improve
 Thanks for your interest in the project!
 Pull Requests are welcome for any type of improvement, from a small typo to a new section in the docs. Help us make the project better!
 
-All the source code is available at [github.com/all-contributors/all-contributors](https://github.com/all-contributors/all-contributors/tree/main/docs)
+All of the source code for the documentation is available in this repository here: [github.com/all-contributors/all-contributors](https://github.com/all-contributors/all-contributors/tree/main/docs)
+
+The all-contributors bot can be [found here:](https://github.com/all-contributors/all-contributors-bot)
+
+And the all-contributors CLI can be found  [here:](https://github.com/all-contributors/all-contributors-cli)
 
 ## Committing to an all-contributors repo
 
