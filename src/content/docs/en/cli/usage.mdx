@@ -7,7 +7,7 @@ import { Aside } from '@astrojs/starlight/components';
 
 <Aside type="tip">
 This usage documentation assumes you have already followed the
-[CLI installation steps](../installation). Below you will learn how to use
+[CLI installation steps](/cli/installation). Below you will learn how to use
 the CLI with the `all-contributors` command, to keep things simple. If you
 are having any difficulties running the command on its own, then give the
 `npx all-contributors-cli init` route a try 😺.
@@ -17,12 +17,12 @@ are having any difficulties running the command on its own, then give the
 
 You will mostly use four subcommands when you work with the CLI:
 
-| Command | Description |
-| --- | --- |
-| `all-contributors init` | Prepare a project to use the CLI |
-| `all-contributors add <username> <contributions>` | Add or update a contributor in your configuration |
-| `all-contributors check` | Find contributors who are not yet acknowledged |
-| `all-contributors generate` | Regenerate the contributor tables and badge in files |
+| Command                                           | Description                                          |
+| ------------------------------------------------ | ---------------------------------------------------- |
+| `all-contributors init`                          | Prepare a project to use the CLI                     |
+| `all-contributors add <username> <contributions>`| Add or update a contributor in your configuration    |
+| `all-contributors check`                         | Find contributors who are not yet acknowledged       |
+| `all-contributors generate`                      | Regenerate the contributor tables and badge in files |
 
 ### `all-contributors init`
 
@@ -35,6 +35,7 @@ The setup includes creating:
 * a contributor table in the `files` you specify.
 
 The default file for the contributor table is your `README.md`.
+
 
 ```console
 npx all-contributors-cli init
@@ -94,7 +95,7 @@ all-contributors add jfmengels code,doc
 
 Where `username` is the user's GitHub or Gitlab username, and
 `contribution` is a `,`-separated list of contributions. See the
-[emoji key (contribution types reference)](../../emoji-key) for a list of valid
+[emoji key (contribution types reference)](/emoji-key) for a list of valid
 `contribution` types.
 
 <Aside type="tip">
@@ -110,6 +111,7 @@ your `.all-contributorsrc` file. This command will identify any contributors who
 If the command finds contributors who have contributed commits but
 are missing from that file, it will return a list and exit with a non-zero status so you can use it in
 scripts or continuous integration (CI) checks.
+
 
 ```console
 all-contributors check

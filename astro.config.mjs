@@ -17,6 +17,7 @@ export default defineConfig({
     // Later we can put redirects here if needed
   },
   integrations: [
+<<<<<<< HEAD
     starlight({
       customCss: [
         './src/styles/global.css',
@@ -37,6 +38,61 @@ export default defineConfig({
             { label: 'emoji-key', slug: 'emoji-key' },
             { label: 'usage tips', slug: 'usage-tips' },
             { label: 'tooling', slug: 'tooling' }
+=======
+      starlight({
+          customCss: [
+              './src/styles/global.css',
+              './src/fonts/font-face.css',
+              ],
+          title: '',
+                  logo: {
+                      src: './src/assets/logo-full.svg',
+                  },
+          favicon: '/icons/favicon-16x16.png',
+          social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/all-contributors/all-contributors' }],
+          sidebar: [
+              {
+                  label: 'Specification',
+                  items: [
+                      { label: 'spec overview', slug: 'overview' },
+                      { label: 'specification', slug: 'specification' },
+                      { label: 'emoji-key', slug: 'emoji-key' },
+                      { label: 'usage tips', slug: 'usage-tips' },
+                      { label: 'tooling', slug: 'tooling' }
+                  ],
+              },
+              {
+                  label: '@all-contributors Bot 🤖',
+                  items: [
+                      { label: 'bot overview', slug: 'bot/overview' },
+                      { label: 'installation', slug: 'bot/installation' },
+                      { label: 'usage', slug: 'bot/usage' },
+                      { label: 'configuration', slug: 'bot/configuration' },
+                      { label: 'faq', slug: 'bot/faq' }
+                  ],
+              },
+              {
+                  label: 'CLI',
+
+                  items: [
+                      { label: 'CLI overview', slug: 'cli/overview' },
+                      { label: 'installation', slug: 'cli/installation' },
+                      { label: 'usage', slug: 'cli/usage' },
+                      { label: 'configuration', slug: 'cli/configuration' },
+                      { label: 'development', slug: 'cli/development' },
+                  ],
+              },
+              {
+                  label: 'Project',
+                  items: [
+                      { label: 'contribute', slug: 'project/contribute' },
+                      { label: 'development', slug: 'project/development' },
+                      { label: 'maintain', slug: 'project/maintain' },
+                      { label: 'code-of-conduct', slug: 'project/code-of-conduct' },
+                      { label: 'implementations', slug: 'project/implementations' },
+                  ],
+              },
+>>>>>>> be051f7 (docs: update dev docs for cli)
           ],
         },
         {
