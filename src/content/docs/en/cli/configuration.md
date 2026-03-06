@@ -16,4 +16,4 @@ Some of the most important fields for the CLI are:
   displayed and whether commits are made automatically
 
 For a complete description of all available options, please refer to the
-[bot configuration documentation](/bot/configuration).
+[bot configuration documentation](../..//bot/configuration).

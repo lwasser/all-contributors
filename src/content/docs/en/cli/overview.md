@@ -25,7 +25,7 @@ You will mostly use four commands with the CLI: `init`, `add`, `check`, and
 `generate`. You can learn more about how each of these commands work in the
 [CLI usage documentation](/cli/usage).
 
-Similar to [the bot](/bot/overview), the CLI allows you to implement the
+Similar to [the bot](../../overview), the CLI allows you to implement the
 [All Contributors](/specification) spec, without maintaining the contributor
 table by hand. It also allows you to use all contributors in repositories
 like GitLab where the bot is not available.
