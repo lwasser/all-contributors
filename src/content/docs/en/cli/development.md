@@ -31,8 +31,7 @@ These are the npm scripts defined within the package.json file when working on t
 
 ## All-contributors CLI commands
 
-When the CLI is installed (`all-contributors-cli`) or run via `npm run dev`,
-these are the subcommands:
+When the CLI is run, either after install or using `npm run dev`, there are a set of subcommands that are available for you to use:
 
 | Command                                           | Description                                          |
 | ------------------------------------------------- | ---------------------------------------------------- |
