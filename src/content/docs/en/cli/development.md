@@ -104,7 +104,6 @@ Codecov is configured in `.codecov.yml`:
 
 - Patch coverage is tracked (coverage of changed code in PRs)
 - Project-level status checks are disabled
-- PR comments are disabled
 
 Codecov now required a token to upload coverage. Uploads use the repository
 secret `secrets.CODECOV_TOKEN` which is scoped to the `all-contributors` org and
