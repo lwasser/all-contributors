@@ -175,12 +175,6 @@ help.
 ## Build system
 
 The build uses native Babel (migrated from `kcd-scripts build`). Key
-dependencies:
-
-- **@babel/core** — Compiler (parse, transform, generate)
-- **@babel/cli** — Runs `babel src --out-dir dist`
-- **@babel/preset-env** — Compiles modern JS for the target (e.g. Node 22)
-- **@babel/runtime** — Runtime helpers used by the transpiled code
 
 ### How to build
 
