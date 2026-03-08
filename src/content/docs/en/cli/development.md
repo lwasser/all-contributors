@@ -73,7 +73,7 @@ The project enforces minimum code coverage thresholds in the Vitest config:
 | Lines         | 50%        |
 | Statements    | 50%        |
 
-Tests will fail if coverage drops below these thresholds.
+If test coverage drops below these thresholds on a pull request, our CI build, which runs coverage, will fail. This will block the pull request from being mergeable.
 
 ### Coverage reports
 
