@@ -117,8 +117,7 @@ trends and CI.
 
 ## Linting
 
-The project uses ESLint. Linting was migrated from `kcd-scripts` to a native
-ESLint setup that supports both CommonJS source files and ES module test files.
+The project uses ESLint as a linter and formatter.
 
 ### Overview
 
