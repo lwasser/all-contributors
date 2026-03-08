@@ -27,42 +27,25 @@ These are the npm scripts defined within the package.json file when working on t
 | `npm run test-coverage`   | Run tests with coverage and generate reports           |
 | `npm run commit`          | Commit changes using a commitizen-compatible interface |
 | `npm run knip`            | Find unused files, dependencies, and exports           |
-<<<<<<< HEAD
 | `npm run add-contributor` | Add a contributor  |
 
 ## All-contributors CLI commands
 
 When the CLI is run, either after install or using `npm run dev`, there are a set of subcommands that are available for you to use:
-=======
-| `npm run add-contributor` | Add a contributor (runs kcd-scripts contributors add)  |
-
-## All-contributors CLI commands
-
-When the CLI is installed (`all-contributors-cli`) or run via `npm run dev`,
-these are the subcommands:
->>>>>>> a11b609 (docs: update dev docs for cli)
 
 | Command                                           | Description                                          |
 | ------------------------------------------------- | ---------------------------------------------------- |
 | `all-contributors add <username> <contributions>` | Add a new contributor                                |
 | `all-contributors generate`                       | Generate the contributors list in the README         |
 | `all-contributors init`                           | Prepare the project to use this tool                 |
-<<<<<<< HEAD
 | `all-contributors check`                          | Compare repo contributors with `.all-contributorsrc` (this helps find contributors missing from your record) |
-=======
-| `all-contributors check`                          | Compare repo contributors with `.all-contributorsrc` |
->>>>>>> a11b609 (docs: update dev docs for cli)
 
 ## Testing and code coverage
 
 ### Run tests
 
-<<<<<<< HEAD
-The project uses [Vitest](https://vitest.dev/) for testing.
+This project uses [Vitest](https://vitest.dev/) for testing.
 To run the test suite use:
-=======
-The project uses Vitest for testing. To run the test suite use:
->>>>>>> a11b609 (docs: update dev docs for cli)
 
 ```bash
 npm test
@@ -72,11 +55,7 @@ This runs all tests without coverage. For coverage (thresholds and reports), use
 `npm run test-coverage` (see below).
 
 If you want to run tests inside your editor and you use VS Code you can install
-<<<<<<< HEAD
 the Vitest extension so tests are discovered and runnable through the VSCode
-=======
-the VitTest extension so tests are discovered and runnable through the VSCode
->>>>>>> a11b609 (docs: update dev docs for cli)
 test runner.
 
 ### Test configuration
@@ -94,11 +73,9 @@ The project enforces minimum code coverage thresholds in the Vitest config:
 | Lines         | 50%        |
 | Statements    | 50%        |
 
-<<<<<<< HEAD
-If test coverage drops below these thresholds on a pull request, our CI build, which runs coverage, will fail. This will block the pull request from being mergeable.
-=======
-Tests will fail if coverage drops below these thresholds.
->>>>>>> a11b609 (docs: update dev docs for cli)
+If test coverage drops below these thresholds on a pull request, our CI build,
+which runs coverage, will fail. This will block the pull request from being
+mergeable.
 
 ### Coverage reports
 
@@ -113,11 +90,8 @@ The HTML report shows which files are covered by tests.
 
 ### Codecov integration
 
-<<<<<<< HEAD
-The project uses [Codecov](https://about.codecov.io/) to track coverage over time and on pull requests.
-=======
-The project uses Codecov to track coverage over time and on pull requests.
->>>>>>> a11b609 (docs: update dev docs for cli)
+The project uses [Codecov](https://about.codecov.io/) to track coverage over
+time and on pull requests.
 
 #### CI integration
 
@@ -132,10 +106,7 @@ Codecov is configured in `.codecov.yml`:
 
 - Patch coverage is tracked (coverage of changed code in PRs)
 - Project-level status checks are disabled
-<<<<<<< HEAD
-=======
 - PR comments are disabled
->>>>>>> a11b609 (docs: update dev docs for cli)
 
 Codecov now required a token to upload coverage. Uploads use the repository
 secret `secrets.CODECOV_TOKEN` which is scoped to the `all-contributors` org and
@@ -149,12 +120,7 @@ trends and CI.
 
 ## Linting
 
-<<<<<<< HEAD
 The project uses ESLint as a linter and formatter.
-=======
-The project uses ESLint. Linting was migrated from `kcd-scripts` to a native
-ESLint setup that supports both CommonJS source files and ES module test files.
->>>>>>> a11b609 (docs: update dev docs for cli)
 
 ### Overview
 
@@ -212,7 +178,7 @@ npm run build
 ```
 
 Output goes to `dist/`. To run the built CLI locally without publishing, use
-`npm run start` (runs `dist/cli.js`) or `npm link` from the repo root and then
+`npm run start` (which runs `dist/cli.js`) or `npm link` from the repo root and then
 run `all-contributors` in another directory.
 
 ## Release process
