@@ -11,7 +11,7 @@ Some of the most important fields for the CLI are:
 
 * `projectOwner` and `projectName`, which tell the CLI which repository to
   use when it talks to GitHub or GitLab
-* `files`, which lists the files where contributor tables and badges live
+* `files`, which lists the files where the contributor table and badge live
 * `imageSize`, `commit`, and other options that control how contributors are
   displayed and whether commits are made automatically
 
