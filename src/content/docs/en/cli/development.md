@@ -163,14 +163,6 @@ help.
 - `lint-staged` is configured in `package.json` under the `lint-staged` field.
 - Linting uses `eslint.config.mjs`.
 
-### Lint-related dependencies
-
-- **eslint** — Core
-- **@eslint/js** — Recommended rules
-- **eslint-plugin-import** — Import/export rules
-- **@vitest/eslint-plugin** — Vitest rules for test files
-- **globals** — Node and Vitest globals for the lint environment
-
 ## Build system
 
 The build uses native Babel (migrated from `kcd-scripts build`). Key
