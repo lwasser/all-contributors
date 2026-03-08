@@ -165,7 +165,7 @@ help.
 
 ## Build system
 
-The build uses native Babel (migrated from `kcd-scripts build`). Key
+The build uses native NPM.
 
 ### How to build
 
