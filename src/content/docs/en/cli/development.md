@@ -27,7 +27,7 @@ These are the npm scripts defined within the package.json file when working on t
 | `npm run test-coverage`   | Run tests with coverage and generate reports           |
 | `npm run commit`          | Commit changes using a commitizen-compatible interface |
 | `npm run knip`            | Find unused files, dependencies, and exports           |
-| `npm run add-contributor` | Add a contributor (runs kcd-scripts contributors add)  |
+| `npm run add-contributor` | Add a contributor  |
 
 ## All-contributors CLI commands
 
@@ -39,13 +39,14 @@ these are the subcommands:
 | `all-contributors add <username> <contributions>` | Add a new contributor                                |
 | `all-contributors generate`                       | Generate the contributors list in the README         |
 | `all-contributors init`                           | Prepare the project to use this tool                 |
-| `all-contributors check`                          | Compare repo contributors with `.all-contributorsrc` |
+| `all-contributors check`                          | Compare repo contributors with `.all-contributorsrc` (this helps find contributors missing from your record) |
 
 ## Testing and code coverage
 
 ### Run tests
 
-The project uses Vitest for testing. To run the test suite use:
+The project uses [Vitest](https://vitest.dev/) for testing.
+To run the test suite use:
 
 ```bash
 npm test
@@ -55,7 +56,7 @@ This runs all tests without coverage. For coverage (thresholds and reports), use
 `npm run test-coverage` (see below).
 
 If you want to run tests inside your editor and you use VS Code you can install
-the VitTest extension so tests are discovered and runnable through the VSCode
+the Vitest extension so tests are discovered and runnable through the VSCode
 test runner.
 
 ### Test configuration
@@ -88,7 +89,7 @@ The HTML report shows which files are covered by tests.
 
 ### Codecov integration
 
-The project uses Codecov to track coverage over time and on pull requests.
+The project uses [Codecov](https://about.codecov.io/) to track coverage over time and on pull requests.
 
 #### CI integration
 
@@ -140,8 +141,8 @@ To auto-fix what ESLint and Prettier can fix you can run:
 npm run lint-fix
 ```
 
-This will fix many issues (e.g. Vitest aliases, unused eslint-disable
-directives, formatting). Some problems still need manual fixes (e.g. unused
+This will fix many issues (_e.g._ Vitest aliases, unused eslint-disable
+directives, formatting). Some problems still need manual fixes (_e.g._ unused
 variables, tests without assertions).
 
 ### Pre-commit hooks
@@ -159,7 +160,7 @@ committing again. As a last resort you can skip the hook with
 `git commit --no-verify`; if you do, mention it in your PR so maintainers can
 help.
 
-**Configuration:**
+#### Configuration
 
 - The hook lives in `.husky/pre-commit` (it runs `npx lint-staged`).
 - `lint-staged` is configured in `package.json` under the `lint-staged` field.
@@ -190,7 +191,7 @@ npm run build
 ```
 
 Output goes to `dist/`. To run the built CLI locally without publishing, use
-`npm run start` (runs `dist/cli.js`) or `npm link` from the repo root and then
+`npm run start` (which runs `dist/cli.js`) or `npm link` from the repo root and then
 run `all-contributors` in another directory.
 
 ## Release process
@@ -205,8 +206,23 @@ Release Please needs a GitHub token to open PRs. The repo uses the secret
 `ALL_CONTRIBS_RELEASE_PLEASE_TOKEN` (scoped to the all-contributors org and CLI
 repo). The same pattern could be extended to the app repo later if needed.
 
-### Release process
+### Release & publish to NPM process
 
-TBD -- this is not yet implemented but was implemented via circleci previously.
-We plan to create a release based process that will support release please and
-manual releases.
+This project uses [release-please](https://github.com/googleapis/release-please) to manage releases. Release-please maintains a running CHANGELOG.md in a pull request that it opens in our repository.  In that pull request, it also maintains the new package version in `package.json` based on [semantic versioning](https://semver.org/)(https://semver.org/) and [Angular commit message conventions](https://www.conventionalcommits.org/).
+
+#### Creating a release
+
+When a pull request is merged, release-please updates the changelog and determines the next version bump. This produces a release PR that tracks all pending changes.
+
+When the release PR is merged:
+
+* The version in `package.json` is updated on `main`
+* A Git tag and GitHub release are created, formatted as `vX.X.X`
+
+## Publishing to NPM
+
+After a release is created, the test suite runs one final time. If it passes, the package is published to NPM via a secure [Trusted Publishing](https://docs.npmjs.com/generating-provenance-statements) pipeline.
+
+This step is protected by a secure GitHub environment. Any maintainer can approve the deployment through the GitHub Actions interface, ensuring optimal security throughout our publication process and adding automation that reduces the burden on our maintainer team.
+
+
